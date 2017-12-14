@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="app">
   <head>
-    <title>Hello, world!</title>
+    <title>Orders administration</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -12,6 +12,12 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 
+    <!-- Javascript -->
+    <script type="text/javascript" src="https://code.angularjs.org/1.6.6/angular.min.js"></script>
+    <script type="text/javascript" src="https://code.angularjs.org/1.6.6/angular-route.min.js"></script>
+    <script type="text/javascript" src="js/app.module.js"></script>
+    <script type="text/javascript" src="js/app.routes.js"></script>
+
   </head>
   <body>
     <h1 class="mainTitle">Welcome to the orders administration panel!</h1>
@@ -20,6 +26,7 @@
         <a href="" class="btn btn-primary navbuttons">Closed orders</a>
         <a href="" class="btn btn-primary navbuttons">New order</a>
     </div>
+
     <ng-view></ng-view>
 
 
