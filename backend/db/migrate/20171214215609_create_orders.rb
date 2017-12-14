@@ -4,7 +4,7 @@ class CreateOrders < ActiveRecord::Migration[5.1]
 
       t.string :address
       t.string :fullname
-      t.integer :cardnumber
+      t.bigint :cardnumber, :limit => 16
       t.integer :cvc
       t.float :price
       t.integer :items

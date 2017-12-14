@@ -10,15 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171214064040) do
+ActiveRecord::Schema.define(version: 20171214215609) do
 
   create_table "orders", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string "address"
     t.string "fullname"
-    t.integer "cardnumber"
+    t.bigint "cardnumber"
     t.integer "cvc"
     t.float "price", limit: 24
     t.integer "items"
+    t.boolean "alreadysent"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
