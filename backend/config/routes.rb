@@ -6,5 +6,6 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :orders
+  resources :orders 
+
 end
