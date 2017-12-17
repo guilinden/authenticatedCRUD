@@ -1,5 +1,7 @@
 class OrdersController < ApplicationController
     
+    before_action :authenticate_request!
+
     def index
         orders = Order.order("created_at DESC")
         render json: {status:"SUCCESS", message:"Loaded orders", data:orders}, status: :ok
@@ -35,6 +37,16 @@ class OrdersController < ApplicationController
         else
             render json: {message:"Cannot delete order", data:order.erros},status: :unprocessable_entity
         end
+    end
+
+    def open_orders
+        orders = Order.where(alreadysent: false)
+        render json: {status:"SUCCESS", message:"Loaded open orders", data:orders}, status: :ok
+    end
+
+    def closed_orders
+        orders = Order.where(alreadysent: true)
+        render json: {status:"SUCCESS", message:"Loaded closed orders", data:orders}, status: :ok
     end
 
     private

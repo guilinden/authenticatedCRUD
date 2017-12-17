@@ -6,6 +6,9 @@ Rails.application.routes.draw do
     end
   end
 
+  get '/orders/open_orders', to: 'orders#open_orders'
+  get '/orders/closed_orders', to: 'orders#closed_orders'
   resources :orders 
+  
 
 end

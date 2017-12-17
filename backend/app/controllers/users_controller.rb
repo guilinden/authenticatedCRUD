@@ -3,6 +3,7 @@ class UsersController < ApplicationController
     
     include JsonWebTokenModule   
 
+    
 
     def create
         user = User.new(user_params)
@@ -21,7 +22,7 @@ class UsersController < ApplicationController
             auth_token = JsonWebToken.encode({user_id: user.id})
             render json: {auth_token: auth_token}, status: :ok
         else
-          render json: {error: 'Invalid username / password'}, status: :unauthorized
+          render json: {error: 'Invalid username / password'}, status: "404"
         end
       end
       

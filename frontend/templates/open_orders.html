@@ -1,0 +1,28 @@
+ <div class="openOrdersBody">
+        <h1 class="mainTitle">Welcome to the orders administration panel!</h1>
+        <div class="buttonNav">
+            <a href="#!/open_orders" class="btn btn-primary navbuttons">Open orders</a>
+            <a href="#!/closed_orders" class="btn btn-primary navbuttons">Closed orders</a>
+            <a href="" class="btn btn-primary navbuttons">New order</a>
+        </div>
+    <h3>Open orders table</h3>
+    <table class="table">
+        <tr>
+            <th>Order id</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Items</th>
+            <th>Price</th>
+            <th>Close order</th>
+        </tr>
+        <tr ng-repeat="order in openOrdersCtrl.orders.data.data">
+            <td>{{order.id}}</td>
+            <td>{{order.fullname}}</td>
+            <td>{{order.address}}</td>
+            <td>{{order.items}}</td>
+            <td>{{order.price}}</td>
+            <td><a href="" ng-click="openOrdersCtrl.closeOrder(order.id)"><i class="material-icons close_order">check</i></a></td>
+        </tr>
+
+    </table>
+</div>

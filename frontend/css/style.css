@@ -5,7 +5,8 @@
 
 .buttonNav {
     text-align: center;
-    margin-top: 15px;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .navbuttons {
@@ -17,4 +18,17 @@
 .buttonReminder {
     margin-top: 40px;
     text-align: center;
+}
+
+.openOrdersBody {
+    width: 80%;
+    margin: auto;
+}
+
+.close_order{
+    color: #5cb85c
+}
+
+.loginBtn {
+    margin-top: 10px;
 }

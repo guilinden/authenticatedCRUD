@@ -9,24 +9,26 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 
     <!-- Javascript -->
     <script type="text/javascript" src="https://code.angularjs.org/1.6.6/angular.min.js"></script>
     <script type="text/javascript" src="https://code.angularjs.org/1.6.6/angular-route.min.js"></script>
+    <script type="text/javascript" src="https://code.angularjs.org/1.6.6/angular-cookies.min.js"></script>    
     <script type="text/javascript" src="js/app.module.js"></script>
     <script type="text/javascript" src="js/app.routes.js"></script>
+    <script type="text/javascript" src="js/orders.service.js"></script>
+    <script type="text/javascript" src="js/openOrders.controller.js"></script>
+    <script type="text/javascript" src="js/closedOrders.controller.js"></script>
+    <script type="text/javascript" src="js/users.service.js"></script>
+    <script type="text/javascript" src="js/login.controller.js"></script>
+
 
   </head>
   <body>
-    <h1 class="mainTitle">Welcome to the orders administration panel!</h1>
-    <div class="buttonNav">
-        <a href="" class="btn btn-primary navbuttons">Open orders</a>
-        <a href="" class="btn btn-primary navbuttons">Closed orders</a>
-        <a href="" class="btn btn-primary navbuttons">New order</a>
-    </div>
-
     <ng-view></ng-view>
 
 
