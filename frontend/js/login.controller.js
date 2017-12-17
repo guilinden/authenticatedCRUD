@@ -26,7 +26,7 @@
         };
 
         function logout(){
-            $cookies.delete('token');
+            $cookies.remove('token');
             $location.path('/');
         }
 
