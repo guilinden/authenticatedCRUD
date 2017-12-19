@@ -3,7 +3,7 @@
     .module('app')
     .controller('openOrdersController', openOrdersController);
 
-    function openOrdersController(orders,$log,$cookies){
+    function openOrdersController(orders,$log,$cookies,$location){
         var vm = this;
 
         vm.getOpenOrders = getOpenOrders;
@@ -18,7 +18,8 @@
                 vm.orders = data;
                 $log.log(data);
             }, function errorCallback(error){
-                $log.log("Unable to fetch data" + error.data);
+                $log.log('Unable to fetch data' + error.data);
+                //$location.path('/').search({denied: 'true'});
             });
         }
 
@@ -30,7 +31,8 @@
             .then(function successCallback(data){
                 getOpenOrders();
             }, function errorCallback(error){
-                $log.log("Unable to fetch data" + error);
+                $log.log("Unable to fetch data" + error.data);
+                $location.path('/').search({denied: 'true'});
             });
         }
 
