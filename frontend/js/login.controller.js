@@ -8,12 +8,9 @@
 
         vm.login = login;
         vm.logout = logout;
-
-		var denied = $location.search().denied;
-
-        if(denied){
-            window.alert('You must be logged in to access restricted area');
-        }
+        
+        
+		
 
         function login(){
             vm.userInfo = {

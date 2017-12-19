@@ -11,15 +11,17 @@ class ApplicationController < ActionController::API
       end
     
       load_current_user!
-      invalid_authentication unless @current_user
+      if !@current_user
+        invalid_authentication
+      end
     end
+
     
     # Returns 401 response. To handle malformed / invalid requests.
     def invalid_authentication
-      head 401, "content_type" => 'text/plain'
-      #render json: {error:"Invalid Request"}, status: 404
+      render json: {message:"Invalid autentication", data:false}, status: 404
     end
-    
+
     private
     # Deconstructs the Authorization header and decodes the JWT token.
     def payload

@@ -2,6 +2,7 @@
     angular
     .module('app',[
         'ui.router',
-        'ngCookies'
+        'ngCookies',
+        'ui.router.state.events'
     ]);
 })();

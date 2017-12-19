@@ -25,6 +25,8 @@ class UsersController < ApplicationController
           render json: {error: 'Invalid username / password'}, status: "404"
         end
       end
+
+
       
       private
       
